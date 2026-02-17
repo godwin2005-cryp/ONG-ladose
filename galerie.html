@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - ONG LA DOSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            columns: 3 300px;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            margin-bottom: 1.5rem;
+            break-inside: avoid;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .gallery-item img,
+        .gallery-item video,
+        .gallery-item iframe {
+            width: 100%;
+            display: block;
+            transition: var(--transition);
+            filter: grayscale(20%);
+        }
+
+        .gallery-item video,
+        .gallery-item iframe {
+            aspect-ratio: 9 / 16;
+            background: #000;
+            border: none;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 77, 0, 0.2);
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover video {
+            filter: grayscale(0%);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                columns: 2 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">ONG <span>LA DOSE</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="galerie.html" class="active">Galerie</a>
+                <a href="equipe.html">L'Équipe</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="container" style="margin-top: 100px;">
+        <h1 class="gradient-text">Galerie d'Expériences</h1>
+        <p style="color: var(--text-muted); margin-bottom: 4rem; font-size: 1.2rem; max-width: 600px;">Plongez dans
+            l'univers de <strong>ONG LA DOSE</strong> à travers nos plus beaux moments capturés.</p>
+
+        <div class="gallery-grid" id="gallery">
+            <!-- Mixed Experience: Gala & Village -->
+            <div class="gallery-item"><img src="art.webp" alt="Gala des Caviars - Signature La Dose"></div>
+            <div class="gallery-item"><img src="DSC_4651 .jpg" alt="Expérience Village La Dose"></div>
+            <div class="gallery-item"><img src="ae.webp" alt="Gala des Caviars - Élégance"></div>
+            <div class="gallery-item"><img src="DSC_4653 copie.jpg" alt="Tradition et Joie"></div>
+            <div class="gallery-item"><img src="aq.webp" alt="Moment Précieux Gala"></div>
+            <div class="gallery-item"><img src="DSC_4664 .jpg" alt="Partage au Village"></div>
+            <div class="gallery-item"><img src="az.webp" alt="Gala des Caviars - Éclat"></div>
+            <div class="gallery-item"><img src="DSC_4673.jpg" alt="Sourires et Culture"></div>
+            <div class="gallery-item"><img src="azz.webp" alt="Gala des Caviars - Premium"></div>
+            <div class="gallery-item"><img src="DSC_4685 .jpg" alt="Immersion La Dose"></div>
+            <div class="gallery-item"><img src="DSC_4794 .jpg" alt="Beauté Naturelle"></div>
+            <div class="gallery-item"><img src="DSC_4811.jpg" alt="Connexion et Sourires"></div>
+            <div class="gallery-item"><img src="DSC_4834.jpg" alt="L'Art de Vivre"></div>
+            <div class="gallery-item"><img src="DSC_4843.jpg" alt="Émotion Pure"></div>
+            <div class="gallery-item"><img src="aqq.jpeg" alt="Moment d'Inspiration"></div>
+
+            <!-- Newest highlights -->
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.33 (2).webp"
+                    alt="Expérience ONG LA DOSE"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.31.webp" alt="Action et Impact">
+            </div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.33 (1).webp"
+                    alt="Sourire et Partage"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.31 (1).webp"
+                    alt="Engagement ONG LA DOSE"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.35 (2).webp" alt="Moment Précieux">
+            </div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.30.webp" alt="Vie de l'ONG"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.33.webp" alt="Collaboration"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.36.webp" alt="Célébration"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.28.webp"
+                    alt="Inspiration Quotidienne"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.30 (1).webp" alt="Énergie Positive">
+            </div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.34 (1).webp" alt="Vision et Avenir">
+            </div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.12.webp" alt="L'Art de la Dose">
+            </div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.16.webp" alt="Joie Commune"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.32 (1).webp" alt="Sincérité"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.14.webp" alt="Harmonie"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.43.32.webp"
+                    alt="Engagement Communautaire"></div>
+            <div class="gallery-item"><img src="WhatsApp Image 2026-02-11 at 08.42.29.webp" alt="Signature ONG LA DOSE">
+            </div>
+
+
+            <!-- Photos provided in the directory - Original list retained for layout flow if needed -->
+
+            <!-- Videos added to the gallery -->
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jc7_5QRgHkI"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8GP9FVs04DM"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9rY9xmHeZE4"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ADwmoELIJMA"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C3kplTT3kBg"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_JDAW_a5oC0"
+                    title="YouTube video Shorts" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ONG LA DOSE - Bohicon, Bénin. Tous droits réservés.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Développé par <strong>Gody center
+                +229 01 96 92 96 55</strong></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

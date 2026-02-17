@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Équipe - ONG LA DOSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .member-card {
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .member-img-container {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            background: var(--card-bg);
+            position: relative;
+        }
+
+        .member-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Back to cover but with better composition and hover toggle */
+            transition: transform 0.5s ease;
+        }
+
+        /* Specialized styling for Naura who has 2 photos */
+        .member-img-dual {
+            display: flex;
+            height: 400px;
+            background: var(--card-bg);
+        }
+
+        .member-img-dual img {
+            flex: 1;
+            height: 100%;
+            object-fit: cover;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(255, 77, 0, 0.2);
+        }
+
+        .member-card:hover .member-img {
+            transform: scale(1.05);
+            object-fit: contain;
+            /* Switch to contain on hover to see full photo if needed */
+        }
+
+        .role {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .phone:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 480px) {
+
+            .member-img-container,
+            .member-img-dual {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">ONG <span>LA DOSE</span></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="equipe.html" class="active">L'Équipe</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="container" style="margin-top: 100px;">
+        <h1 class="gradient-text">Le Conseil</h1>
+        <p style="color: var(--text-muted);">Les esprits créatifs derrière chaque dose d'expérience.</p>
+
+        <div class="team-grid">
+            <!-- Diane SENAHOUN -->
+            <div class="glass-card member-card">
+                <div class="member-img-container">
+                    <img src="art.webp" alt="Diane SENAHOUN" class="member-img">
+                </div>
+                <div class="member-info">
+                    <span class="role">Présidente</span>
+                    <h3>Diane SENAHOUN</h3>
+                    <a href="tel:+2290195774917" class="phone">📞 +229 01 95 77 49 17</a>
+                </div>
+            </div>
+
+            <!-- Aurore CHALLA -->
+            <div class="glass-card member-card">
+                <div class="member-img-container">
+                    <img src="ae.webp" alt="Aurore CHALLA" class="member-img">
+                </div>
+                <div class="member-info">
+                    <span class="role">Vice Présidente</span>
+                    <h3>Aurore CHALLA</h3>
+                    <a href="tel:+2290150282078" class="phone">📞 +229 01 50 28 20 78</a>
+                </div>
+            </div>
+
+            <!-- Naura CHALLA -->
+            <div class="glass-card member-card">
+                <div class="member-img-dual">
+                    <img src="aq.webp" alt="Naura CHALLA">
+
+                </div>
+                <div class="member-info">
+                    <span class="role">Chargée de Communication (Ccom)</span>
+                    <h3>Naura CHALLA</h3>
+                    <a href="tel:+2290147949464" class="phone">📞 +229 01 47 94 94 64</a>
+                </div>
+            </div>
+
+            <!-- Jivago DOSSOU -->
+            <div class="glass-card member-card">
+                <div class="member-img-container">
+                    <img src="azz.webp" alt="Jivago DOSSOU" class="member-img">
+                </div>
+                <div class="member-info">
+                    <span class="role">L'organisateur</span>
+                    <h3>Jivago DOSSOU</h3>
+                    <a href="tel:+2290167778149" class="phone">📞 +229 01 67 77 81 49</a>
+                </div>
+            </div>
+
+            <!-- Rosette ZOHAN -->
+            <div class="glass-card member-card">
+                <div class="member-img-container">
+                    <img src="az.webp" alt="Rosette ZOHAN" class="member-img">
+                </div>
+                <div class="member-info">
+                    <span class="role">Conseillère</span>
+                    <h3>Rosette ZOHAN</h3>
+                    <a href="tel:+2290196671959" class="phone">📞 +229 01 96 67 19 59</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ONG LA DOSE - Bohicon, Bénin. Tous droits réservés.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Développé par <strong>Gody center
+                +229 01 96 92 96 55</strong></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
